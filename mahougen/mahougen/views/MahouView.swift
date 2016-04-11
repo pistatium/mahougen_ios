@@ -8,6 +8,7 @@ class MahouView: UIView {
     }
     
     var paths: [Path] = []
+    var pathsSet: [[Path]] = [[]]
     var lastPoint: CGPoint!
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -24,7 +25,6 @@ class MahouView: UIView {
     }
 
     override func drawRect(rect: CGRect) {
-        print("draw")
         let context = UIGraphicsGetCurrentContext()
         CGContextBeginPath(context)
         
