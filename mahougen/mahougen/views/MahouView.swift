@@ -20,6 +20,16 @@ class MahouView: UIView {
         )
     }()
     
+    func clear() {
+        paths = []
+        self.setNeedsDisplay()
+    }
+    
+    func setVertex(count: Int) {
+        self.vertexCount = count
+        clear()
+    }
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let current = touches.first?.locationInView(self)
         {

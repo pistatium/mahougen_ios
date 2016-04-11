@@ -115,7 +115,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = "西村　公宏";
+				ORGANIZATIONNAME = Pistatium;
 				TargetAttributes = {
 					6B7466401CBA7E9E0045B0CC = {
 						CreatedOnToolsVersion = 7.3;
