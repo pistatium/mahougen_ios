@@ -1,8 +1,8 @@
 import UIKit
 
 struct Vector {
-    let x: CGFloat;
-    let y: CGFloat;
+    let x: CGFloat
+    let y: CGFloat
 }
 
 extension Vector {
@@ -12,6 +12,14 @@ extension Vector {
     
     func angle() -> CGFloat {
         return atan2(self.x, self.y)
+    }
+    
+    func toPoint() -> CGPoint {
+        return CGPoint(x: self.x, y: self.y)
+    }
+    
+    static func ofAngle(rad: CGFloat) -> Vector {
+        return Vector(x: cos(rad), y: sin(rad))
     }
 }
 
