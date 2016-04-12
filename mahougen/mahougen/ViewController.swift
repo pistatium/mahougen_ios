@@ -1,11 +1,17 @@
 import UIKit
+import GoogleMobileAds
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var mahouView: MahouView!
     
+    @IBOutlet weak var bannerView: GADBannerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        bannerView.adUnitID = "ca-app-pub-2359565431337443/6432525275"
+        bannerView.rootViewController = self
+        bannerView.loadRequest(GADRequest())
     }
     
     override func didReceiveMemoryWarning() {
