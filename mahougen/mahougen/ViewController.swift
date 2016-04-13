@@ -29,9 +29,11 @@ class ViewController: UIViewController {
         let screenshot = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext();
         
-        UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil);
-        
+        let activityItem: [AnyObject] = [" #mahougen", screenshot]
+        let avc = UIActivityViewController(activityItems: activityItem as [AnyObject], applicationActivities: nil)
+        self.presentViewController(avc, animated: true, completion: nil)
     }
+    
     @IBAction func onClickReset(sender: UIButton) {
         mahouView.clear()
     }
